@@ -21,7 +21,7 @@ cd <your-project-name> && npm install
 ```
 npm run start
 ```
-## Deploy to Desktop*
+## Deploy to Desktop
 1. Run the build process
 ```
 npm run build
