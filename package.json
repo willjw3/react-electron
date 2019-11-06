@@ -1,17 +1,33 @@
 {
   "name": "react-electron",
   "version": "0.1.0",
+  "description": "Simple boilerplate for developing an Electron app with React",
+  "author": "willjw3",
+  "build": {
+    "appId": "react.electron",
+    "win": {
+      "icon": "build/icon.ico"
+    }
+  },
+  "main": "public/electron.js",
+  "homepage": "./",
   "private": true,
   "dependencies": {
+    "cross-env": "^6.0.3",
+    "electron-is-dev": "^1.1.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start-react": "react-scripts start",
+    "build-react": "react-scripts build",
+    "test-react": "react-scripts test --env=jsdom",
+    "eject-react": "react-scripts eject",
+    "build-electron": "electron-builder",
+    "build": "yarn build-react && yarn build-electron",
+    "start": "concurrently \"cross-env BROWSER=none yarn start-react\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +43,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "electron": "^7.1.0",
+    "electron-builder": "^22.1.0",
+    "wait-on": "^3.3.0"
   }
 }
