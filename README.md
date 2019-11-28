@@ -4,6 +4,9 @@
 <br>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), [Electron](https://electronjs.org/), and [electron-builder](https://github.com/electron-userland/electron-builder).
 
+## Build Electron App With React - Video Tutorial
+[Video Tutorial at YouTube](https://www.youtube.com/playlist?list=PLASldBPN_pkCXhDdahLI2RIRy1tmGTeit)
+
 ## Usage
 1. Clone this repository.
 ```
