@@ -24,6 +24,8 @@ cd <your-project-name> && npm install
 ```
 npm run start
 ```
+5. Edit package.json file with the appropriate details of your project.
+'''
 ## Deploy to Desktop
 1. Run the build process
 ```

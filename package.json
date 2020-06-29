@@ -5,8 +5,26 @@
   "author": "willjw3",
   "build": {
     "appId": "react.electron",
+    "productName": "react-electron",
+    "mac":{
+      "icon": "build/logo512.png",
+      "target": "tar.gz"
+    },
+    "linux": {
+      "category": "Utils",
+      "icon": "build/icon.png",
+      "packageCategory": "utils",
+      "maintainer": "your name <your email>",
+      "asar": true,
+      "target": [
+        "deb",
+        "tar.xz"
+      ],
+      "synopsis": "Basically same as description but shorter"
+    },
     "win": {
-      "icon": "build/icon.png"
+      "icon": "build/icon.png",
+      "target": "nsis"
     }
   },
   "main": "public/electron.js",
@@ -26,7 +44,7 @@
     "test-react": "react-scripts test --env=jsdom",
     "eject-react": "react-scripts eject",
     "build-electron": "electron-builder",
-    "build": "yarn build-react && yarn build-electron",
+    "build": "yarn build-react && yarn build-electron -wml",
     "start": "concurrently \"cross-env BROWSER=none yarn start-react\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
